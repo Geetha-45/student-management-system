@@ -1,59 +1,97 @@
-# StudentManagement
+# Student Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.24.
+A full-stack web application to manage student information using Angular, Spring Boot, and MySQL.
 
-## Development server
+## Technologies Used
 
-To start a local development server, run:
+- **Frontend:** Angular 21
+- **Backend:** Java, Spring Boot
+- **Database:** MySQL
+- **Build Tool:** Maven
+- **API Testing:** Postman
 
-```bash
+## Project Structure
+
+```text
+student-management/
+├── src/                           # Angular frontend
+├── public/
+├── package.json
+├── angular.json
+├── README.md
+└── backend/
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/com/example/demo/
+    │   │   │   ├── controllers/
+    │   │   │   ├── models/
+    │   │   │   ├── repository/
+    │   │   │   └── services/
+    │   │   └── resources/
+    │   │       ├── application.properties
+    │   │       └── schema.sql
+    │   └── test/
+    ├── pom.xml
+    └── mvnw.cmd
+```
+
+## Features
+
+- Add and manage student details
+- View student records
+- Update and delete student information
+- Student dashboard
+- MySQL database integration
+- REST API integration with Angular
+
+## Prerequisites
+
+Install the following before running the project:
+
+- Node.js and npm
+- Angular CLI
+- Java JDK compatible with the Spring Boot project
+- MySQL Server
+- MySQL Workbench (optional)
+
+## Database Setup
+
+1. Start your MySQL server.
+2. Open MySQL Workbench.
+3. Run the SQL script located at `backend/src/main/resources/schema.sql`.
+4. Configure your MySQL connection in `backend/src/main/resources/application.properties`.
+
+Set your database password through the `DB_PASSWORD` environment variable. Do not upload actual passwords or other secrets to GitHub.
+
+## Run the Backend
+
+Open PowerShell and navigate to the backend directory:
+
+```powershell
+cd backend
+$env:DB_PASSWORD="your_mysql_password"
+.\mvnw.cmd spring-boot:run
+```
+
+The backend starts on the port configured in the Spring Boot application.
+
+## Run the Frontend
+
+Open another terminal in the project root:
+
+```powershell
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at:
 
-## Code scaffolding
+http://localhost:4200/
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Repository
 
-```bash
-ng generate component component-name
-```
+GitHub: https://github.com/Geetha-45/student-management-system
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Author
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Student Management System project built as a full-stack development project.
